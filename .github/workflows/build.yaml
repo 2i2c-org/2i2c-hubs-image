@@ -21,5 +21,4 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.QUAY_PASSWORD }}
         DOCKER_REGISTRY: "quay.io"
 
-        # Uncomment and modify the following line with your image name.
-        # IMAGE_NAME: "<quay-username>/<repository-name>"
+        IMAGE_NAME: "2i2c/pilot-hubs-image"
