@@ -130,10 +130,6 @@ COPY rsession.conf /etc/rstudio/rsession.conf
 COPY install.R /tmp/install.R
 RUN /tmp/install.R && \
  	rm -rf /tmp/downloaded_packages/ /tmp/*.rds
-	
-COPY environment.yml /tmp/
-
-RUN conda env update -p ${CONDA_DIR} -f /tmp/environment.yml
 
 COPY requirements.txt /tmp/
 
