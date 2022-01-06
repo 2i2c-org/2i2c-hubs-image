@@ -1,6 +1,8 @@
-# hub-user-image-template
+# pilot-hubs-image
 
-This is a template repository for creating dedicated user images for our hubs.
+This is the default image used by the 2i2c community hubs deployed from https://github.com/2i2c-org/infrastructure.
+
+It was built using a template repository for creating dedicated user images for our hubs.
 
 ## About this template repository
 
