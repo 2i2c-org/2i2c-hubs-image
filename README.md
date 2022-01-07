@@ -1,4 +1,4 @@
-# pilot-hubs-image
+# 2i2c-hubs-image
 
 This is the default image used by the 2i2c community hubs deployed from https://github.com/2i2c-org/infrastructure.
 
