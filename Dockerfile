@@ -86,7 +86,3 @@ RUN pip install --no-cache -r /tmp/infra-requirements.txt
 # Set up notebook-as-pdf dependencies
 ENV PYPPETEER_HOME ${CONDA_DIR}
 RUN pyppeteer-install
-
-# Enable toc2 and spellchecker in nbextensions
-RUN jupyter nbextension enable toc2/main
-RUN jupyter nbextension enable spellchecker/main
