@@ -1,5 +1,21 @@
 #!/bin/bash
 
-# Enable toc2 and spellchecker in nbextensions
-jupyter nbextension enable toc2/main
-jupyter nbextension enable spellchecker/main
+
+jupyter contrib nbextension install --user
+
+# Force nbextensions toc2 and spellchecker
+
+echo '{
+"load_extensions": {
+"spellchecker/main": true,
+"toc2/main": true,
+"nbextensions_configurator/config_menu/main": false,
+"contrib_nbextensions_help_item/main": false
+},
+"toc2": {
+"widenNotebook": false,
+"moveMenuLeft": false,
+"number_sections": false,
+"toc_window_display": false
+}
+}' > ~/.jupyter/nbconfig/notebook.json
