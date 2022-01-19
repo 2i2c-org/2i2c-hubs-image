@@ -69,6 +69,8 @@ USER root
 COPY install-mambaforge.bash /tmp/install-mambaforge.bash
 RUN /tmp/install-mambaforge.bash
 
+RUN jupyter contrib nbextension install --sys-prefix
+
 USER ${NB_USER}
 
 COPY environment.yml /tmp/environment.yml
@@ -78,8 +80,7 @@ RUN mamba env update -p ${CONDA_DIR} -f /tmp/environment.yml
 COPY infra-requirements.txt /tmp/infra-requirements.txt
 RUN pip install --no-cache -r /tmp/infra-requirements.txt
 
-COPY jupyter-extensions.bash /tmp/jupyter-extensions.bash
-RUN /tmp/jupyter-extensions.bash
+RUN echo '{\n"load_extensions": {\n"spellchecker/main": true,\n"toc2/main": true,\n"nbextensions_configurator/config_menu/main": false,\n"contrib_nbextensions_help_item/main": false\n},\n"toc2": {\n"widenNotebook": false,\n"moveMenuLeft": false,\n"number_sections": false,\n"toc_window_display": false\n}\n}' > ~/.jupyter/nbconfig/notebook.json
 
 # Set bash as shell in terminado.
 ADD jupyter_notebook_config.py  ${CONDA_PREFIX}/etc/jupyter/
