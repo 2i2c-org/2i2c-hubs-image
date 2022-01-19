@@ -78,8 +78,8 @@ RUN mamba env update -p ${CONDA_DIR} -f /tmp/environment.yml
 COPY infra-requirements.txt /tmp/infra-requirements.txt
 RUN pip install --no-cache -r /tmp/infra-requirements.txt
 
-COPY install-jupyter-extensions.bash /tmp/install-jupyter-extensions.bash
-RUN /tmp/install-jupyter-extensions.bash
+COPY jupyter-extensions.bash /tmp/jupyter-extensions.bash
+RUN /tmp/jupyter-extensions.bash
 
 # Set bash as shell in terminado.
 ADD jupyter_notebook_config.py  ${CONDA_PREFIX}/etc/jupyter/
