@@ -83,3 +83,4 @@ RUN echo '{\n"load_extensions": {\n"spellchecker/main": true,\n"toc2/main": true
 
 # Set bash as shell in terminado.
 ADD jupyter_notebook_config.py  ${CONDA_PREFIX}/etc/jupyter/
+
