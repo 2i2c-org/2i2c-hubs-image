@@ -15,11 +15,6 @@ ENV NB_UID 1000
 
 RUN adduser --disabled-password --gecos "Default Jupyter user" ${NB_USER}
 
-# Create user owned R libs dir
-# This lets users temporarily install packages
-# ENV R_LIBS_USER /opt/r
-# RUN install -d -o ${NB_USER} -g ${NB_USER} ${R_LIBS_USER}
-
 RUN apt-get -qq update --yes && \
     apt-get -qq install --yes \
             tar \
@@ -85,10 +80,6 @@ RUN pip install --no-cache -r /tmp/infra-requirements.txt
 
 COPY install-jupyter-extensions.bash /tmp/install-jupyter-extensions.bash
 RUN /tmp/install-jupyter-extensions.bash
-
-# Set up notebook-as-pdf dependencies
-# ENV PYPPETEER_HOME ${CONDA_DIR}
-# RUN pyppeteer-install
 
 # Set bash as shell in terminado.
 ADD jupyter_notebook_config.py  ${CONDA_PREFIX}/etc/jupyter/
