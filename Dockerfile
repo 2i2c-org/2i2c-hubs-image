@@ -86,7 +86,3 @@ RUN pip install --no-cache -r /tmp/infra-requirements.txt
 # Set up notebook-as-pdf dependencies
 ENV PYPPETEER_HOME ${CONDA_DIR}
 RUN pyppeteer-install
-
-# Enable the nbextensions toc2 and spellchecker
-RUN jupyter contrib nbextension install --user
-RUN echo '{\n"load_extensions": {\n"spellchecker/main": true,\n"toc2/main": true,\n"nbextensions_configurator/config_menu/main": false,\n"contrib_nbextensions_help_item/main": false\n},\n"toc2": {\n"widenNotebook": false,\n"moveMenuLeft": false,\n"number_sections": false,\n"toc_window_display": false\n}\n}' > ~/.jupyter/nbconfig/notebook.json
