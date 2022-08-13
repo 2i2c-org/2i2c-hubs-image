@@ -1,0 +1,35 @@
+numpy
+scipy
+matplotlib
+pandas
+seaborn
+sympy
+networkx
+scikit-learn
+beautifulsoup4
+httpx
+statsmodels
+nltk
+spacy
+geopandas
+# Infrastructure things
+jupyterlab==3.*
+voila==0.2.6
+nbgitpuller==0.10.*
+jupyter-resource-usage==0.5.0
+RISE==5.7.1
+jupyter_contrib_nbextensions==0.5.1
+notebook==7.0.0a5
+jupyterhub==2.3.1
+jupyter-rsession-proxy==1.2
+jupyter-tree-download==1.0.1
+ipywidgets==7.7.1
+otter-grader==3.3.0
+datascience
+geojson
+folium
+geopy
+# JupyterLab extensions
+jupyterlab_widgets==1.0.*
+jupytext==1.10.*
+jupyter-server-proxy==3.0.2
