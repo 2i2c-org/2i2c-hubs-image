@@ -2,6 +2,8 @@ dependencies:
 - nodejs==15.*
 - pip==22.2.*
 - python==3.10.*
+- jupyterlab==4.0.0a27
+- notebook==7.0.0a5
 - matplotlib==3.5.2
 - ipympl==0.9.1
 - pandas==1.4.3
