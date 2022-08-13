@@ -3,15 +3,7 @@ scipy
 matplotlib
 pandas
 seaborn
-sympy
-networkx
-scikit-learn
-beautifulsoup4
-httpx
 statsmodels
-nltk
-spacy
-geopandas
 # Infrastructure things
 jupyterlab==3.*
 voila==0.2.6
@@ -28,7 +20,6 @@ otter-grader==3.3.0
 datascience
 geojson
 folium
-geopy
 # JupyterLab extensions
 jupyterlab_widgets==1.0.*
 jupytext==1.10.*
