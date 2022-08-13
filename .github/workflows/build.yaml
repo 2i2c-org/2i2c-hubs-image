@@ -3,7 +3,7 @@ name: Build container image
 on:
   push:
     branches:
-      - main
+      - fa22
 
 jobs:
   build:
