@@ -133,6 +133,9 @@ RUN /tmp/install.R && \
 
 COPY requirements.txt /tmp/
 
+# Upgrade pip so it resolves package versions better
+RUN python3 -m pip install --upgrade pip
+
 RUN python3 -m pip install -r /tmp/requirements.txt
 
 # Install IRKernel
