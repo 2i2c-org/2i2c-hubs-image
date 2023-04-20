@@ -43,4 +43,7 @@ geopy==2.2.0
 # JupyterLab extensions
 jupyterlab_widgets==1.0.*
 jupytext==1.10.*
+# Without this, jupytext won't work on the classical notebook interface
+# See https://github.com/mwouts/jupytext/issues/1051
+nbclassic==0.5.5
 jupyter-server-proxy==3.0.2
