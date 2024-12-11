@@ -1,5 +1,8 @@
 # 2i2c-hubs-image
 
+>[!warning]
+> This repo is now archived. There is no longer a centrally maintained 2i2c image, and each 2i2c hub administrator maintains their own hub images.
+
 This is the default image used by the 2i2c community hubs deployed from https://github.com/2i2c-org/infrastructure.
 
 It was built using a template repository for creating dedicated user images for our hubs.
